@@ -7,8 +7,8 @@ This is a Helm chart for deploying [UERANSIM](https://github.com/aligungr/UERANS
  - [Multus-CNI](https://github.com/intel/multus-cni).
  - [Helm3](https://helm.sh/docs/intro/install/).
  - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) (optional).
- - A physical network interface on each Kubernetes node named `eth0`.
-**Note:** If the name of network interfaces on your Kubernetes nodes is different from `eth0`, see [Networks configuration](#networks-configuration).
+ - A physical network interface on each Kubernetes node named `eth00`.
+**Note:** If the name of network interfaces on your Kubernetes nodes is different from `eth00`, see [Networks configuration](#networks-configuration).
 
 ## Quickstart guide
 
@@ -90,7 +90,7 @@ This chart allows you to customize its installation. The table below shows the p
 | Parameter | Description | Default value |
 | --- | --- | --- |
 | `global.n2network.name` | N2 network name. | `n2network` |
-| `global.n2network.masterIf` | N2 network MACVLAN master interface. | `eth0` |
+| `global.n2network.masterIf` | N2 network MACVLAN master interface. | `eth00` |
 | `global.n2network.subnetIP` | N2 network subnet IP address. | `10.100.50.248` |
 | `global.n2network.cidr` | N2 network cidr. | `29` |
 | `global.n2network.gatewayIP` | N2 network gateway IP address. | `10.100.50.254` |
@@ -99,7 +99,7 @@ This chart allows you to customize its installation. The table below shows the p
 | Parameter | Description | Default value |
 | --- | --- | --- |
 | `global.n3network.name` | N3 network name. | `n3network` |
-| `global.n3network.masterIf` | N3 network MACVLAN master interface. | `eth0` |
+| `global.n3network.masterIf` | N3 network MACVLAN master interface. | `eth00` |
 | `global.n3network.subnetIP` | N3 network subnet IP address. | `10.100.50.232` |
 | `global.n3network.cidr` | N3 network cidr. | `29` |
 | `global.n3network.gatewayIP` | N3 network gateway IP address. | `10.100.50.238` |

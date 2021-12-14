@@ -9,9 +9,9 @@ This chart is included in the [dependencies](/charts/free5gc/charts) of the [mai
  - [Multus-CNI](https://github.com/intel/multus-cni).
  - [Helm3](https://helm.sh/docs/intro/install/).
  - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) (optional).
- - A physical network interface on each Kubernetes node named `eth0`.
- - A physical network interface on each Kubernetes node named `eth1` to connect the UPF to the Data Network.
-**Note:** If the names of network interfaces on your Kubernetes nodes are different from `eth0` and `eth1`, see [Networks configuration](#networks-configuration).
+ - A physical network interface on each Kubernetes node named `eth00`.
+ - A physical network interface on each Kubernetes node named `eth11` to connect the UPF to the Data Network.
+**Note:** If the names of network interfaces on your Kubernetes nodes are different from `eth00` and `eth11`, see [Networks configuration](#networks-configuration).
 
 ## Quickstart guide
 
@@ -81,7 +81,7 @@ This chart allows you to customize its installation. The table below shows the p
 | Parameter | Description | Default value |
 | --- | --- | --- |
 | `global.n3network.name` | N3 network name. | `n3network` |
-| `global.n3network.masterIf` | N3 network MACVLAN master interface. | `eth0` |
+| `global.n3network.masterIf` | N3 network MACVLAN master interface. | `eth00` |
 | `global.n3network.subnetIP` | N3 network subnet IP address. | `10.100.50.232` |
 | `global.n3network.cidr` | N3 network cidr. | `29` |
 | `global.n3network.gatewayIP` | N3 network gateway IP address. | `10.100.50.238` |
@@ -90,7 +90,7 @@ This chart allows you to customize its installation. The table below shows the p
 | Parameter | Description | Default value |
 | --- | --- | --- |
 | `global.n4network.name` | N4 network name. | `n4network` |
-| `global.n4network.masterIf` | N4 network MACVLAN master interface. | `eth0` |
+| `global.n4network.masterIf` | N4 network MACVLAN master interface. | `eth00` |
 | `global.n4network.subnetIP` | N4 network subnet IP address. | `10.100.50.240` |
 | `global.n4network.cidr` | N4 network cidr. | `29` |
 | `global.n4network.gatewayIP` | N4 network gateway IP address. | `10.100.50.246` |
@@ -99,7 +99,7 @@ This chart allows you to customize its installation. The table below shows the p
 | Parameter | Description | Default value |
 | --- | --- | --- |
 | `global.n6network.name` | N6 network name. | `n6network` |
-| `global.n6network.masterIf` | N6 network MACVLAN master interface. The IP address of this interface must be in the N6 network subnet IP rang. | `eth1` |
+| `global.n6network.masterIf` | N6 network MACVLAN master interface. The IP address of this interface must be in the N6 network subnet IP rang. | `eth11` |
 | `global.n6network.subnetIP` | N6 network subnet IP address (The IP address of the Data Network. | `10.100.100.0` |
 | `global.n6network.cidr` | N6 network cidr. | `24` |
 | `global.n6network.gatewayIP` | N6 network gateway IP address (The IP address to go to the Data Network). | `10.100.100.1` |
@@ -111,7 +111,7 @@ These parameters if `global.userPlaneArchitecture` is set to `ulcl`.
 | --- | --- | --- |
 These parameters if `global.userPlaneArchitecture` is set to `ulcl`.
 | `global.n9network.name` | N9 network name. | `n9network` |
-| `global.n9network.masterIf` | N9 network MACVLAN master interface. The IP address of this interface must be in the N9 network subnet IP rang. | `eth1` |
+| `global.n9network.masterIf` | N9 network MACVLAN master interface. The IP address of this interface must be in the N9 network subnet IP rang. | `eth11` |
 | `global.n9network.subnetIP` | N9 network subnet IP address (The IP address of the Data Network. | `10.100.50.224` |
 | `global.n9network.cidr` | N9 network cidr. | `29` |
 | `global.n9network.gatewayIP` | N9 network gateway IP address (The IP address to go to the Data Network). | `10.100.50.230` |

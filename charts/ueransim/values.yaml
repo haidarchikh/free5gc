@@ -19,14 +19,14 @@ global:
   #Global network parametes
   n2network:
     name: n2network
-    masterIf: eth0
+    masterIf: eth00
     subnetIP: 10.100.50.248
     cidr: 29
     gatewayIP: 10.100.50.254
     excludeIP: 10.100.50.254
   n3network:
     name: n3network
-    masterIf: eth0
+    masterIf: eth00
     subnetIP: 10.100.50.232
     cidr: 29
     gatewayIP: 10.100.50.238

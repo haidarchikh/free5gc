@@ -10,7 +10,7 @@ This chart is included in the [dependencies](/charts/free5gc/charts) of the [mai
  - [Multus-CNI](https://github.com/intel/multus-cni) (if `global.smf.service.ngap.enabled` is set to `false`).
  - [Helm3](https://helm.sh/docs/intro/install/).
  - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) (optional).
- - A physical network interface on each Kubernetes node named `eth0`.
+ - A physical network interface on each Kubernetes node named `eth00`.
 
 ## Quickstart guide
 
@@ -55,7 +55,7 @@ This chart allows you to customize its installation. The table below shows the p
 | --- | --- | --- |
 | `global.smf.n4if.IpAddress` | The IP address of the SMF’s N4 interface. | `10.100.50.244` |
 | `global.n4network.name` | N4 network name. | `n4network` |
-| `global.n4network.masterIf` | N4 network MACVLAN master interface. | `eth0` |
+| `global.n4network.masterIf` | N4 network MACVLAN master interface. | `eth00` |
 | `global.n4network.subnetIP` | N4 network subnet IP address. | `10.100.50.240` |
 | `global.n4network.cidr` | N4 network cidr. | `29` |
 | `global.n4network.gatewayIP` | N4 network gateway IP address. | `10.100.50.246` |

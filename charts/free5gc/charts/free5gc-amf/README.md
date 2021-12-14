@@ -10,7 +10,7 @@ This chart is included in the [dependencies](/charts/free5gc/charts) of the [mai
  - [Multus-CNI](https://github.com/intel/multus-cni) (if `global.amf.service.ngap.enabled` is set to `false`).
  - [Helm3](https://helm.sh/docs/intro/install/).
  - [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) (optional).
- - A physical network interface on each Kubernetes node named `eth0`.
+ - A physical network interface on each Kubernetes node named `eth00`.
 
 ## Quickstart guide
 
@@ -62,7 +62,7 @@ These parameters apply only if `global.amf.service.ngap.enabled` is set to `fals
 | --- | --- | --- |
 | `global.amf.n2if.IpAddress` | The IP address of the AMF’s N2 interface. | `10.100.50.249` |
 | `global.n2network.name` | N2 network name. | `n2network` |
-| `global.n2network.masterIf` | N2 network MACVLAN master interface. | `eth0` |
+| `global.n2network.masterIf` | N2 network MACVLAN master interface. | `eth00` |
 | `global.n2network.subnetIP` | N2 network subnet IP address. | `10.100.50.248` |
 | `global.n2network.cidr` | N2 network cidr. | `29` |
 | `global.n2network.gatewayIP` | N2 network gateway IP address. | `10.100.50.254` |

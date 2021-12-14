@@ -29,8 +29,7 @@ $ sudo make install
 
 Install MULTUS
 ```bash
-$ wget https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/deployments/multus-daemonset-thick-plugin.yml
-$ kubectl apply -f /home/ubuntu/k8s/multus-daemonset-thick-plugin.yml
+$ kubectl apply -f https://raw.githubusercontent.com/k8snetworkplumbingwg/multus-cni/master/deployments/multus-daemonset-thick-plugin.yml
 ```
 
 Add helm repo

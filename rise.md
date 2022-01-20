@@ -51,8 +51,6 @@ $ sudo ip link set eth00 up
 $ sudo ip link set eth11 up
 
 $ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-$ sudo iptables -A FORWARD -i eth0 -o eth11 -m state --state RELATED,ESTABLISHED -j ACCEPT
-$ sudo iptables -A FORWARD -i eth11 -o eth0 -j ACCEPT
 
 $ grep -rl eth0 . | xargs sed -i 's/eth0/eth00/g'
 $ grep -rl eth1 . | xargs sed -i 's/eth1/eth11/g'
